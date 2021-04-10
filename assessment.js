@@ -17,7 +17,7 @@ function createAssesmentResult(element) {
     element.appendChild(h3); //result-areaにh3変数を設定
     
     const p = document.createElement('p');
-    p.innerText = result;
+    p.innerText = assessment(userName);
     element.appendChild(p);
 }
 
@@ -31,14 +31,14 @@ assessmentButton.onclick = ()　=> {
 // すでにある診断結果を削除
     removeAllChildren(resultDivided);
     
-   
+    const result = assessment(userName);
 // h3 タグと p タグを作る
     createAssesmentResult(resultDivided,result);
 
     removeAllChildren(tweetDivided);
 
 //aタグを作る
-    const a = document.createElement('a')
+    const a = document.createElement('a');
     const href = 'https://twitter.com/intent/tweet?button_hashtag=' + 
     encodeURIComponent('あなたのいいところ') +
     '&ref_src=twsrc%5Etfw';
