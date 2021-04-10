@@ -32,7 +32,7 @@ assessmentButton.onclick = ()　=> {
     removeAllChildren(resultDivided);
     const result = assessment(userName);
 // h3 タグと p タグを作る
-    createAssesmentResult(resultDivided,result);
+    createAssesmentResult(resultDivided);
 
     removeAllChildren(tweetDivided);
 
