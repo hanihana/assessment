@@ -17,7 +17,7 @@ function createAssesmentResult(element) {
     element.appendChild(h3); //result-areaにh3変数を設定
     
     const p = document.createElement('p');
-    p.innerText = assessment(userName);
+    p.innerText = result;
     element.appendChild(p);
 }
 
@@ -33,7 +33,7 @@ assessmentButton.onclick = ()　=> {
     
     const result = assessment(userName);
 // h3 タグと p タグを作る
-    createAssesmentResult(resultDivided,result);
+    createAssesmentResult(resultDivided);
 
     removeAllChildren(tweetDivided);
 
