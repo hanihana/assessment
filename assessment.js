@@ -10,14 +10,14 @@ function removeAllChildren(element) {
         }
     }
 
-function createAssesmentResult(element) {
+function createAssesmentResult(element,message) {
     // 診断結果表示エリアの作成
     const h3 = document.createElement('h3'); //h3タグを作る
     h3.innerText = '診断結果'; //h3タグに'診断結果'の文字列を設定
     element.appendChild(h3); //result-areaにh3変数を設定
     
     const p = document.createElement('p');
-    p.innerText = result;
+    p.innerText = message;
     element.appendChild(p);
 }
 
@@ -33,7 +33,7 @@ assessmentButton.onclick = ()　=> {
     
     const result = assessment(userName);
 // h3 タグと p タグを作る
-    createAssesmentResult(resultDivided);
+    createAssesmentResult(resultDivided,result);
 
     removeAllChildren(tweetDivided);
 
