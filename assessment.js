@@ -16,9 +16,6 @@ function createAssesmentResult(element) {
     h3.innerText = '診断結果'; //h3タグに'診断結果'の文字列を設定
     element.appendChild(h3); //result-areaにh3変数を設定
     
-    let userName = userNameInput.value;
-    const result = assessment(userName);
-    
     const p = document.createElement('p');
     p.innerText = result;
     element.appendChild(p);
@@ -33,9 +30,9 @@ assessmentButton.onclick = ()　=> {
 
 // すでにある診断結果を削除
     removeAllChildren(resultDivided);
-// h3 タグと p タグを作る
-    createAssesmentResult(resultDivided);
     const result = assessment(userName);
+// h3 タグと p タグを作る
+    createAssesmentResult(resultDivided,result);
 
     removeAllChildren(tweetDivided);
 
