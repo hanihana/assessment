@@ -31,8 +31,9 @@ assessmentButton.onclick = ()　=> {
 // すでにある診断結果を削除
     removeAllChildren(resultDivided);
     const result = assessment(userName);
+    console.log (result);
 // h3 タグと p タグを作る
-    createAssesmentResult(resultDivided);
+    createAssesmentResult(resultDivided,result);
 
     removeAllChildren(tweetDivided);
 
