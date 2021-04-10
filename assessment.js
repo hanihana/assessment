@@ -30,8 +30,8 @@ assessmentButton.onclick = ()　=> {
 
 // すでにある診断結果を削除
     removeAllChildren(resultDivided);
-    const result = assessment(userName);
-    console.log (assessment(userName));
+    
+   
 // h3 タグと p タグを作る
     createAssesmentResult(resultDivided,result);
 
